@@ -1,2 +1,3 @@
-<strong>ICS Homework 2017</strong>
+ICS Homework 2017
+==================
 <hr>
