@@ -1,18 +1,14 @@
 var inString : string
 var outString : string := ""
 
-put "Enter string to change vowels"
+put "Enter string to change vowels."
 get inString : *
 
 for i : 1..length(inString)
-    if index("aeiouAEIOU", inString(i)) = 0 then
-	outString += inString(i)
+    if index("aeiouAEIOU", inString(i)) not= 0 then
+        outString += "9"
     else
-	if inString(i) > 90 then
-	    outString += inString(i) - 32 %shh I won't use it on a test I swear
-	else
-	    outString += inString(i) + 32
-	end if
+        outString += inString(i)
     end if
 end for
 
