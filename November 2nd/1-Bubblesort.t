@@ -1,5 +1,5 @@
 var ar : array 0..2 of int
-%Bubble sort courtesy of michael shi
+%Bubble sort courtesy of michael shi i understand this but PEOPLE THAT COPY AND PASTE dddddont
 for i : 0..2
     randint(ar(i), 100, 200)
 end for
