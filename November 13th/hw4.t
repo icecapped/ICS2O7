@@ -1,15 +1,16 @@
-function uselessFunction(num : real) : real
-	result num * 2
+function uselessFunction (num : real) : real
+    result num * 2
 end uselessFunction
 
 %main
 var num : real
 
+put "Enter number to double it until > 1000: "..
+get num
+
 loop
-	put "Enter number to double it, or number > 500 to exit."
-	get num
-	
-	exit when uselessFunction(num) > 1000
-	
-	put "Doubled: ", uselessFunction(num)
+    num := uselessFunction(num)
+    exit when num > 1000
+    put num
 end loop
+
