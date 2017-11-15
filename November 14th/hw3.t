@@ -1,6 +1,6 @@
 procedure slant(n : int)
 	for i : 1..n
-		for q : 1..i
+		for q : 2..i
 			put " "..
 		end for
 		put "*"
