@@ -1,3 +1,11 @@
+%Quick Note:
+%
+%this was made on 1080p screen, so on other
+%resolutions it may look messed up, and I don't believe there's
+%any way to make it relative to screen size, sooooooooo
+%
+%hope you're using a 1920 x 1080 screen
+
 import GUI
 
 %Constants
@@ -19,6 +27,9 @@ var input : int %IO files, each declared whenever you load a new page
 
 %Toolbar
 var background : int := Pic.FileNew("bg.jpg")
+var torontoPic : int := Pic.FileNew("Data/Education/toronto.jpg")
+var waterlooPic : int := Pic.FileNew("Data/Education/waterloo.jpg")
+var camosunPic : int := Pic.FileNew("Data/Education/camosun.jpg")
 var homeButton : int
 var careerButton : int
 var educationButton : int
@@ -42,9 +53,9 @@ end hideAll
 %Helper Procedures
 procedure title(titleStr : string, subStr : string)
     Font.Draw(titleStr, 50, maxy - 80, SEGOE40, black)
-    Font.Draw(subStr, length(titleStr) * 38, maxy - 80, SEGOE15, black)
+    Font.Draw(subStr, length(titleStr) * 35 + 100, maxy - 80, SEGOE15, black)
     Draw.Line(30, maxy - 90, maxx - 30, maxy - 90, black)
-    locate(8, 1)
+    locate(6, 1)
 end title
 
 %Page Procedures
@@ -52,8 +63,8 @@ end title
 procedure home
     hideAll
     Pic.Draw(background, 0, 0, 0)
-    Font.Draw("Systems Architect", 200, 315, SEGOE40, white)
-    Font.Draw("Michael Shi", maxx - 110, 10, SEGOE15, white)
+    Font.Draw("Systems Architect", 160, 315, SEGOE40, white)
+    Font.Draw("Michael Shi", maxx - 140, 10, SEGOE15, white)
     GUI.Show(homeButton)
     GUI.Show(careerButton)
     GUI.Show(educationButton)
@@ -82,6 +93,11 @@ procedure education
     GUI.Show(uWaterlooButton)
     GUI.Show(uTorontoButton) %Is redundant right now, but if i add other elements that need to be hidden later, it's easier
     GUI.Show(camosunButton)
+    
+    Pic.Draw(torontoPic, U_BT_WIDTH, 100 + GUI.GetHeight(uTorontoButton), 0)
+    Pic.Draw(waterlooPic, 0, 100 + GUI.GetHeight(uWaterlooButton), 0)
+    Pic.Draw(camosunPic, U_BT_WIDTH * 2, 100 + GUI.GetHeight(camosunButton), 0)
+    
     title("Education", "University and College pathways.")
 end education
 
@@ -104,17 +120,27 @@ end sources
 %Education page procedures
 procedure waterloo
     hideAll
-    title("UWaterloo", "Renowned for computer science & engineering.")
+    title("UWaterloo", "Renowned for computer science.")
     open : input, "Data/Education/waterloo.txt", get
-    
+    var currentLine : string
+    loop
+	exit when eof(input)
+	get : input, currentLine : *
+	put currentLine
+    end loop
     close : input 
 end waterloo
 
 procedure toronto
     hideAll
-    title("UofT", " Recognized for Artificial Intelligence and good in general.")
+    title("UofT", " Recognized for Artificial Intelligence.")
     open : input, "Data/Education/toronto.txt", get
-    
+    var currentLine : string
+    loop
+	exit when eof(input)
+	get : input, currentLine : *
+	put currentLine
+    end loop
     close : input 
 end toronto
 
@@ -122,7 +148,12 @@ procedure camosun
     hideAll
     title("Camosun", "A college in B.C.")
     open : input, "Data/Education/camosun.txt", get
-    
+    var currentLine : string
+    loop
+	exit when eof(input)
+	get : input, currentLine : *
+	put currentLine
+    end loop
     close : input 
 end camosun
 

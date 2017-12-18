@@ -1,1 +1,21 @@
-Info here
+NOC 2173 - Software Engineer - Systems Architect
+
+Titles: Systems Architect, Application Architect, Software Architect
+Duties: Creating requirements, organizing and analyzing system structure as well as communicating with clients.
+
+Description:
+A systems architect is a professional that develops the architecture/structure 
+of a computer system in order to meet a goal the client has provided.
+The job includes dividing large goals into smaller sub-goals, as well as 
+organizing internal interfaces and resources required for the project.
+Because of the large role of system architects, the requirements for the
+job are usually quite high, with lots of experience with the specific
+technologies used in the company being an important asset.
+
+Education and Job req: (Common ones)
+-Bachelor of Computer Science or related degree
+-Minimum 2 years software architect experience
+-Minimum 10 years experience in software-related fields
+-Design and system knowledge
+-Excellent communication & leadership skills
+-Experience leading teams
