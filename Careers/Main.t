@@ -55,7 +55,7 @@ procedure title(titleStr : string, subStr : string)
     Font.Draw(titleStr, 50, maxy - 80, SEGOE40, black)
     Font.Draw(subStr, length(titleStr) * 35 + 100, maxy - 80, SEGOE15, black)
     Draw.Line(30, maxy - 90, maxx - 30, maxy - 90, black)
-    locate(6, 1)
+    locate(7, 1) 
 end title
 
 %Page Procedures
