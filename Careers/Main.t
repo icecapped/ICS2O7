@@ -58,6 +58,15 @@ procedure title(titleStr : string, subStr : string)
     locate(7, 1) 
 end title
 
+procedure putText
+    var currentLine : string
+    loop
+	exit when eof(input)
+	get : input, currentLine : *
+	put currentLine
+    end loop
+end putText
+
 %Page Procedures
 
 procedure home
@@ -79,11 +88,7 @@ procedure career
     open : input, "Data/career.txt", get
     
     var currentLine : string
-    loop
-	exit when eof(input)
-	get : input, currentLine : *
-	put currentLine
-    end loop
+    putText
     close : input
 end career
 
@@ -105,7 +110,7 @@ procedure market
     hideAll
     title("Market", "Outlook, wages, and employers.")
     open : input, "Data/market.txt", get
-    
+    putText
     close : input
 end market
 
@@ -113,7 +118,7 @@ procedure sources
     hideAll
     title("Sources", "")
     open : input, "Data/sources.txt", get
-    
+    putText
     close : input 
 end sources
 
@@ -122,12 +127,7 @@ procedure waterloo
     hideAll
     title("UWaterloo", "Renowned for computer science.")
     open : input, "Data/Education/waterloo.txt", get
-    var currentLine : string
-    loop
-	exit when eof(input)
-	get : input, currentLine : *
-	put currentLine
-    end loop
+    putText
     close : input 
 end waterloo
 
@@ -136,11 +136,7 @@ procedure toronto
     title("UofT", " Recognized for Artificial Intelligence.")
     open : input, "Data/Education/toronto.txt", get
     var currentLine : string
-    loop
-	exit when eof(input)
-	get : input, currentLine : *
-	put currentLine
-    end loop
+    putText
     close : input 
 end toronto
 
@@ -149,11 +145,7 @@ procedure camosun
     title("Camosun", "A college in B.C.")
     open : input, "Data/Education/camosun.txt", get
     var currentLine : string
-    loop
-	exit when eof(input)
-	get : input, currentLine : *
-	put currentLine
-    end loop
+    putText
     close : input 
 end camosun
 
